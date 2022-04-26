@@ -4,7 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSWATCH 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/darkly/bootstrap.min.css"
+    />
     <title>Tasks App</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar navbar-dark bg-dark px-5 mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand">Tasks App</a>
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            id="search"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <form id="task-form">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Task Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Task Name"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="description" class="form-label"
+                    >Task Description</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="description"
+                    placeholder="Task Description"
+                    rows="4"
+                  ></textarea>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block text-center"
+                  >
+                    Save Task
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <table class="table table-dark table-striped">
+            <thead>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Description</th>
+            </thead>
+            <tbody id="tasks"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
 </html>
